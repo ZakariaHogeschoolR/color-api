@@ -3,6 +3,8 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from dataset import CustomDataset
 from model import SimpleLSTMModel
+from pathlib import Path
+
 
 def one_hot_encode(x, vocab_size):
     return F.one_hot(x, num_classes=vocab_size).float()
