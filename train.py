@@ -41,7 +41,8 @@ def generate_sample(model, char2idx, idx2char, device, allowed_chars, max_len=12
 
 
 def train():
-    data_file = r"C:/ai/Data/data.txt"
+    base_path = Path(__file__).resolve().parent
+    data_file = base_path / "Data" / "data.txt"
 
     dataset = CustomDataset(data_file)
     dataloader = DataLoader(dataset, batch_size=1, shuffle=True, drop_last=True)
