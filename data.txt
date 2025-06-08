@@ -1,0 +1,8 @@
+hallo["#1A1A1A", "#2B2B2B", "#3C3C3C"]
+hallo["#1C1C1E", "#F39C12", "#D35400"]
+hallo["#8E8E93", "#007AFF", "#27AE60"]
+hallo["#8E8E93", "#2C3E50", "#BDC3C7"]
+hallo["#D35400", "#2C3E50", "#34495E"]
+hallo["#2C3E50", "#1A1A1A", "#F8FAFC"]
+hallo["#007ACC", "#FFFFFF", "#3498DB"]
+hallo["#8E8E93", "#0F172A", "#007AFF"]hallo
