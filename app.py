@@ -11,12 +11,21 @@ class PromptInput(BaseModel):
 class ColorOutput(BaseModel):
     colors: list[str]
 
-@app.post("/generate", response_model=ColorOutput)
+@app.api_route("/generate", methods=["GET", "POST"])
 def generate_palette(input: PromptInput):
-    try:
-        result = train()
-        return {"colors": result}
-    except Exception as e:
-        import traceback
-        print("ERROR:", traceback.format_exc())
-        raise HTTPException(status_code=500, detail=str(e))
+    if request.method == "POST":
+        try:
+            result = train()
+            return {"colors": result}
+        except Exception as e:
+            import traceback
+            print("ERROR:", traceback.format_exc())
+            raise HTTPException(status_code=500, detail=str(e))
+    elif request.method == "GET":
+        try:
+            result = train()
+            return {"colors": result}
+        except Exception as e:
+            import traceback
+            print("ERROR:", traceback.format_exc())
+            raise HTTPException(status_code=500, detail=str(e))
